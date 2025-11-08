@@ -1,10 +1,11 @@
+import SecretSantaPage from "./SecretSanta/SecretSantaPage"
 
 
 const Pages = () => {
   return (
-    <div>
-      <h1>Welcome to the SunRun Pages Page</h1>
-    </div>
+  <div>
+    <SecretSantaPage/>
+  </div>
   )
 }
 

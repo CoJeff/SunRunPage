@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
@@ -28,6 +28,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #4b2685 !important;
+  color: rgba(255, 255, 255, 0.87) !important;
 }
 
 h1 {
@@ -47,22 +49,53 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #705fbb;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* Dark theme overrides for Bootstrap components */
+.form-control {
+  background-color: #8d6ac5 !important;
+  border-color: #6c48a7 !important;
+  color: white !important;
+}
+
+.form-control:focus {
+  background-color: #6c48a7 !important;
+  border-color: #666 !important;
+  color: white !important;
+}
+
+.form-label {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+.card {
+  background-color: #333 !important;
+  border-color: #444 !important;
+}
+
+.list-group-item {
+  background-color: #333 !important;
+  border-color: #444 !important;
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+/* Make sure text in Bootstrap components is visible */
+h1, h2, h3, h4, h5, h6, p, span, div {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+/* Override Bootstrap's light theme */
+.btn-primary {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+}
+
+.btn-danger {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
 }
