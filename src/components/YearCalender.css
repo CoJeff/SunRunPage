@@ -1,0 +1,88 @@
+.yc-root {
+  padding: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 12px;
+
+  max-width: 1400px;   /* oder 1600px, 100%, was dir passt */
+  width: 1400px;
+  margin: 0 auto;      /* zentriert den Kalender */
+}
+
+/* Grid-Definition: 1 Spalte für Tag + 12 Monats-Spalten */
+.yc-header-row,
+.yc-day-row {
+  display: grid;
+  grid-template-columns: 1.5rem repeat(12, minmax(0, 1fr));
+}
+
+/* Obere linke Ecke */
+.yc-header-corner {
+}
+
+/* Monatskopf */
+.yc-header-month {
+  text-align: center;
+  font-weight: 600;
+  padding: 4px 0;
+  background: linear-gradient(to bottom, #2563eb, #1d4ed8);
+  color: #ffffff;
+  border-top: 1px solid #1e40af;
+  border-right: 1px solid #1e40af;
+}
+
+/* linke Tages-Leiste */
+.yc-day-label {
+  text-align: right;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 11px;
+  color: #4b5563;
+  border-left: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+}
+
+/* Grundstil der Tageszellen */
+.yc-day-cell {
+  border-top: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  border-left: 1px solid #e5e7eb;
+
+  min-height: 26px;
+  padding: 2px 3px;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 11px;
+
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+/* normale, gültige Tage (leicht kontrastreich) */
+.yc-day-cell--normal {
+  background-color: #f9fafb;
+}
+
+/* ungültige Tage (z.B. 31. Februar) */
+.yc-day-cell--invalid {
+  background-color: #9b9b9b;
+  color: #9ca3af;
+  cursor: default;
+}
+
+/* Urlaubstage */
+.yc-day-cell--vacation {
+  background-color: #bfdbfe;
+  border-color: #93c5fd;
+}
+
+/* Disabled-Button default-Stile entfernen */
+.yc-day-cell:disabled {
+  cursor: default;
+}

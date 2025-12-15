@@ -1,7 +1,12 @@
+import YearCalendar from "../YearCalender"
+
 const Home = () => {
   return (
     <div>
-      <h1>Welcome to the SunRun Home Page</h1>
+      
+      <YearCalendar />
+      
+
     </div>
   )
 }
